@@ -1,8 +1,32 @@
 <% provide(:title, 'Locations') %>
-<h1>Locations</h1>
+<h1>Locations and Menus </h1>
 <p>
-  Get help on the Ruby on Rails Tutorial at the
-  <a href="http://railstutorial.org/help">Rails Tutorial help page</a>.
-  To get help on this sample app, see the
-  <a href="http://railstutorial.org/book">Rails Tutorial book</a>.
+  <table>
+    <tr>
+    <td class="locations-cell">
+      <div class="title">Chinatown Manhattan</div>
+      14 Mott St.<br>
+      Manhattan, NY 10013<br> 
+      (212) 267-9680<br>
+      <%= link_to 'Directions', 'http://goo.gl/maps/Q76Ld' %><br>
+      <%= link_to 'Menu', '#' %>
+    </td>
+    <td class="locations-cell">
+      <div class="title">Midtown Manhattan</div>
+      136 W 28th St.<br>
+      Manhattan, NY 10001<br>
+      (646) 638-0888<br>
+      <%= link_to 'Directions', 'http://goo.gl/maps/Q76Ld' %><br>
+      <%= link_to 'Menu', '#' %>
+    </td>
+    <td class="locations-cell">
+      <div class="title">Queens Crossing Mall</div>
+      38-10 138th St. (1st Floor)<br>
+      Flushing, NY 11354<br>
+      (718) 395-8119<br>
+      <%= link_to 'Directions', 'http://goo.gl/maps/Q76Ld' %><br>
+      <%= link_to 'Menu', '#' %>
+    </td>
+    </tr>
+  </table>
 </p>

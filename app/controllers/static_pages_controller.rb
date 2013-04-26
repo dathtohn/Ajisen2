@@ -7,4 +7,7 @@ class StaticPagesController < ApplicationController
 
   def locations
   end
+
+  def contact
+  end
 end
