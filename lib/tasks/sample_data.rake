@@ -6,6 +6,11 @@ namespace :db do
                          password: "foobar",
                          password_confirmation: "foobar")
     admin.toggle!(:admin)
+    admin2 = User.create!(name: "ScotterC",
+                         email: "scott@artsicle.com",
+                         password: "foobar",
+                         password_confirmation: "foobar")
+    admin2.toggle!(:admin)
     99.times do |n|
       name  = Faker::Name.name
       email = "example-#{n+1}@ajisen.com"

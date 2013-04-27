@@ -1,4 +1,6 @@
 Ajisen2::Application.routes.draw do
+  get "offers/new"
+
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 
