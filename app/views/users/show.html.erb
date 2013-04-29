@@ -5,6 +5,9 @@
 			<h1>
 				<%= gravatar_for @user %>
 				<%= @user.name %>
+				<% if current_user.admin? || correct_user? %>
+					<br>Loyalty Points: <%= @user.points %>
+				<% end %>
 			</h1>
 		</section>
 	</aside>

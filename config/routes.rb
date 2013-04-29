@@ -7,7 +7,6 @@ Ajisen2::Application.routes.draw do
   root to: 'static_pages#home'
   
   match '/signup',    to: 'users#new'
-  #match '/edit',      to: 'users#edit'
   match '/signin',    to: 'sessions#new'
   match '/signout',   to: 'sessions#destroy', via: :delete
   

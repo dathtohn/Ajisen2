@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_filter :signed_in_user, only: [:index, :edit, :update, :destroy]
   before_filter :correct_user,   only: [:edit, :update]
-  before_filter :admin_user,     only: :destroy
+  before_filter :admin_user,     only: [:destroy, :update]
 
   def show
     @user = User.find(params[:id])
@@ -23,11 +23,21 @@ class UsersController < ApplicationController
     end
   end
 
+=begin
   def edit
     #@user = User.find(params[:id])
   end
+=end
 
   def update
+    # very unsure of this part
+    # it works but problem also when i update the profile
+=begin
+    if current_user.admin? && @user.points.update_attributes(params[:user])
+      flash[:success] = "Points updated"
+      sign_in current_user
+      redirect_to @user
+=end
     if @user.update_attributes(params[:user])
       # Handle a successful update.
       flash[:success] = "Profile updated"
